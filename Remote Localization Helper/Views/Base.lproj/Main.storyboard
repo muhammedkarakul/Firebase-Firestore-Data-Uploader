@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Remote_Localization_Helper" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,8 +685,9 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="Remote Localization Helper" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -700,18 +703,117 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Drag And Drop View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="DragAndDropViewController" customModule="Remote_Localization_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="336"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="xIB-75-ua6">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="336"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSC-53-epB">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="336"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="UploadAreaDarkMode" id="GGW-Xf-H1n"/>
+                                    </imageView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="PB2-zh-6JU" customClass="DropView" customModule="Remote_Localization_Helper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="336"/>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dSC-53-epB" firstAttribute="top" secondItem="xIB-75-ua6" secondAttribute="top" id="088-26-qnu"/>
+                                    <constraint firstAttribute="bottom" secondItem="dSC-53-epB" secondAttribute="bottom" id="8QC-RS-kGm"/>
+                                    <constraint firstItem="PB2-zh-6JU" firstAttribute="leading" secondItem="xIB-75-ua6" secondAttribute="leading" id="ULS-Gz-NHa"/>
+                                    <constraint firstAttribute="trailing" secondItem="dSC-53-epB" secondAttribute="trailing" id="WVT-Fv-E8s"/>
+                                    <constraint firstItem="dSC-53-epB" firstAttribute="leading" secondItem="xIB-75-ua6" secondAttribute="leading" id="ZHc-U8-FVs"/>
+                                    <constraint firstAttribute="bottom" secondItem="PB2-zh-6JU" secondAttribute="bottom" id="itr-gD-Oey"/>
+                                    <constraint firstItem="PB2-zh-6JU" firstAttribute="top" secondItem="xIB-75-ua6" secondAttribute="top" id="pk1-0B-LaS"/>
+                                    <constraint firstAttribute="trailing" secondItem="PB2-zh-6JU" secondAttribute="trailing" id="u7s-Kj-2Oo"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xIB-75-ua6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="9Y3-Vm-4bb"/>
+                            <constraint firstItem="xIB-75-ua6" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="EAY-w9-JaI"/>
+                            <constraint firstAttribute="bottom" secondItem="xIB-75-ua6" secondAttribute="bottom" id="cwN-c5-vNX"/>
+                            <constraint firstAttribute="trailing" secondItem="xIB-75-ua6" secondAttribute="trailing" id="xV7-wT-mKe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dropView" destination="PB2-zh-6JU" id="l9w-H1-iXZ"/>
+                        <segue destination="i3d-sy-ukj" kind="sheet" identifier="UploadSheetViewController" id="Otc-ag-v4A"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="711"/>
+        </scene>
+        <!--Upload Sheet View Controller-->
+        <scene sceneID="eMT-fs-uIy">
+            <objects>
+                <viewController id="i3d-sy-ukj" customClass="UploadSheetViewController" customModule="Remote_Localization_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="MxM-tU-Qtd">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="100"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iKl-rf-OWw">
+                                <rect key="frame" x="20" y="58" width="354" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Collection Path" bezelStyle="round" id="84H-Rc-YeO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jpZ-Z7-r1s">
+                                <rect key="frame" x="298" y="10" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="HhV-8H-XD9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" target="i3d-sy-ukj" id="iCN-rr-wuR"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Wm-is-PEK">
+                                <rect key="frame" x="14" y="10" width="84" height="32"/>
+                                <buttonCell key="cell" type="push" title="Upload" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" inset="2" id="lkf-n8-E3N">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="uploadButtonTapped:" target="i3d-sy-ukj" id="9yw-DO-qL9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8Wm-is-PEK" secondAttribute="bottom" constant="17" id="75T-0Y-oQD"/>
+                            <constraint firstItem="jpZ-Z7-r1s" firstAttribute="leading" secondItem="8Wm-is-PEK" secondAttribute="trailing" constant="212" id="FPJ-dZ-GIC"/>
+                            <constraint firstItem="8Wm-is-PEK" firstAttribute="leading" secondItem="MxM-tU-Qtd" secondAttribute="leading" constant="20" id="FYP-ld-Fgp"/>
+                            <constraint firstItem="8Wm-is-PEK" firstAttribute="top" secondItem="iKl-rf-OWw" secondAttribute="bottom" constant="20" id="G51-Hu-WEg"/>
+                            <constraint firstAttribute="bottom" secondItem="jpZ-Z7-r1s" secondAttribute="bottom" constant="17" id="NBw-16-M4M"/>
+                            <constraint firstItem="jpZ-Z7-r1s" firstAttribute="top" secondItem="iKl-rf-OWw" secondAttribute="bottom" constant="20" id="Pu4-dX-UHh"/>
+                            <constraint firstItem="iKl-rf-OWw" firstAttribute="leading" secondItem="MxM-tU-Qtd" secondAttribute="leading" constant="20" id="dkv-DQ-gtm"/>
+                            <constraint firstAttribute="trailing" secondItem="iKl-rf-OWw" secondAttribute="trailing" constant="20" id="j53-a6-9zy"/>
+                            <constraint firstAttribute="trailing" secondItem="jpZ-Z7-r1s" secondAttribute="trailing" constant="20" id="oZi-dQ-QfC"/>
+                            <constraint firstItem="iKl-rf-OWw" firstAttribute="top" secondItem="MxM-tU-Qtd" secondAttribute="top" constant="20" id="tWJ-CM-Cgd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionPath" destination="iKl-rf-OWw" id="Ccw-FP-Rym"/>
+                        <outlet property="uploadButton" destination="8Wm-is-PEK" id="iFg-lu-wts"/>
+                    </connections>
+                </viewController>
+                <customObject id="Gu9-Tt-kJP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1059"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="UploadAreaDarkMode" width="256" height="256"/>
+    </resources>
 </document>

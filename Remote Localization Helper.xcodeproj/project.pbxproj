@@ -3,24 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		577F79D52416681F00860C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F79D42416681F00860C43 /* AppDelegate.swift */; };
-		577F79D72416681F00860C43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F79D62416681F00860C43 /* ViewController.swift */; };
+		577F79D72416681F00860C43 /* DragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F79D62416681F00860C43 /* DragAndDropViewController.swift */; };
 		577F79D92416682000860C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577F79D82416682000860C43 /* Assets.xcassets */; };
 		577F79DC2416682000860C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577F79DA2416682000860C43 /* Main.storyboard */; };
+		577F79E9241679AF00860C43 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F79E8241679AF00860C43 /* DropView.swift */; };
+		577F79EE2416A4B000860C43 /* UploadSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F79EC2416A4B000860C43 /* UploadSheetViewController.swift */; };
+		60EB084A507207B78CB2FDE6 /* Pods_Remote_Localization_Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE18BC40143476AF24A2396F /* Pods_Remote_Localization_Helper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		577F79D12416681F00860C43 /* Remote Localization Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Remote Localization Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		577F79D42416681F00860C43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		577F79D62416681F00860C43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		577F79D62416681F00860C43 /* DragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropViewController.swift; sourceTree = "<group>"; };
 		577F79D82416682000860C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577F79DB2416682000860C43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		577F79DD2416682000860C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		577F79DE2416682000860C43 /* Remote_Localization_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Remote_Localization_Helper.entitlements; sourceTree = "<group>"; };
+		577F79E8241679AF00860C43 /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		577F79EC2416A4B000860C43 /* UploadSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSheetViewController.swift; sourceTree = "<group>"; };
+		CFB95392FDAD5B5298732C66 /* Pods-Remote Localization Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Localization Helper.debug.xcconfig"; path = "Target Support Files/Pods-Remote Localization Helper/Pods-Remote Localization Helper.debug.xcconfig"; sourceTree = "<group>"; };
+		E631B876FDE0D65CD6D6E53D /* Pods-Remote Localization Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Localization Helper.release.xcconfig"; path = "Target Support Files/Pods-Remote Localization Helper/Pods-Remote Localization Helper.release.xcconfig"; sourceTree = "<group>"; };
+		FE18BC40143476AF24A2396F /* Pods_Remote_Localization_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Remote_Localization_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +36,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60EB084A507207B78CB2FDE6 /* Pods_Remote_Localization_Helper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CF47D43153867C9631C52DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE18BC40143476AF24A2396F /* Pods_Remote_Localization_Helper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		571297F52417890F00A4A977 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				577F79D42416681F00860C43 /* AppDelegate.swift */,
+				577F79D82416682000860C43 /* Assets.xcassets */,
+				577F79DE2416682000860C43 /* Remote_Localization_Helper.entitlements */,
+				577F79DD2416682000860C43 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		571297F6241789CD00A4A977 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				577F79EC2416A4B000860C43 /* UploadSheetViewController.swift */,
+				577F79D62416681F00860C43 /* DragAndDropViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		571297F7241789F800A4A977 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				577F79E8241679AF00860C43 /* DropView.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		571297F824178A0100A4A977 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				577F79DA2416682000860C43 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		577F79C82416681F00860C43 = {
 			isa = PBXGroup;
 			children = (
 				577F79D32416681F00860C43 /* Remote Localization Helper */,
 				577F79D22416681F00860C43 /* Products */,
+				7352146A80F0C87367E011BB /* Pods */,
+				2CF47D43153867C9631C52DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +108,21 @@
 		577F79D32416681F00860C43 /* Remote Localization Helper */ = {
 			isa = PBXGroup;
 			children = (
-				577F79D42416681F00860C43 /* AppDelegate.swift */,
-				577F79D62416681F00860C43 /* ViewController.swift */,
-				577F79D82416682000860C43 /* Assets.xcassets */,
-				577F79DA2416682000860C43 /* Main.storyboard */,
-				577F79DD2416682000860C43 /* Info.plist */,
-				577F79DE2416682000860C43 /* Remote_Localization_Helper.entitlements */,
+				571297F824178A0100A4A977 /* Views */,
+				571297F7241789F800A4A977 /* Models */,
+				571297F6241789CD00A4A977 /* Controllers */,
+				571297F52417890F00A4A977 /* SupportFiles */,
 			);
 			path = "Remote Localization Helper";
+			sourceTree = "<group>";
+		};
+		7352146A80F0C87367E011BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFB95392FDAD5B5298732C66 /* Pods-Remote Localization Helper.debug.xcconfig */,
+				E631B876FDE0D65CD6D6E53D /* Pods-Remote Localization Helper.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 577F79E12416682000860C43 /* Build configuration list for PBXNativeTarget "Remote Localization Helper" */;
 			buildPhases = (
+				7216F18DC54EB61F776EE675 /* [CP] Check Pods Manifest.lock */,
 				577F79CD2416681F00860C43 /* Sources */,
 				577F79CE2416681F00860C43 /* Frameworks */,
 				577F79CF2416681F00860C43 /* Resources */,
+				662FD51F85D623DF0FDBB52E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,13 +192,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		662FD51F85D623DF0FDBB52E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Remote Localization Helper/Pods-Remote Localization Helper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Remote Localization Helper/Pods-Remote Localization Helper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Remote Localization Helper/Pods-Remote Localization Helper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7216F18DC54EB61F776EE675 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Remote Localization Helper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		577F79CD2416681F00860C43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577F79D72416681F00860C43 /* ViewController.swift in Sources */,
+				577F79D72416681F00860C43 /* DragAndDropViewController.swift in Sources */,
 				577F79D52416681F00860C43 /* AppDelegate.swift in Sources */,
+				577F79E9241679AF00860C43 /* DropView.swift in Sources */,
+				577F79EE2416A4B000860C43 /* UploadSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -256,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -267,17 +375,19 @@
 		};
 		577F79E22416682000860C43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB95392FDAD5B5298732C66 /* Pods-Remote Localization Helper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Remote Localization Helper/Remote_Localization_Helper.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Remote Localization Helper/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Remote Localization Helper/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Loodos.Remote-Localization-Helper";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourCompany.AppName;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -285,17 +395,19 @@
 		};
 		577F79E32416682000860C43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E631B876FDE0D65CD6D6E53D /* Pods-Remote Localization Helper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Remote Localization Helper/Remote_Localization_Helper.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Remote Localization Helper/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Remote Localization Helper/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Loodos.Remote-Localization-Helper";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourCompany.AppName;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
