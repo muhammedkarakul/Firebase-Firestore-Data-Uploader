@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>765045276382-f2cd5rnvbkp4suetar453pf93g9athnv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.765045276382-f2cd5rnvbkp4suetar453pf93g9athnv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCKat7JMh-5VYcOMHGtFaCaQoE7UaXbKB0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>765045276382</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.loodos.StarterBeta</string>
+	<key>PROJECT_ID</key>
+	<string>starter-ef26b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>starter-ef26b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:765045276382:ios:b99625219310d2e3fb8c4f</string>
+	<key>DATABASE_URL</key>
+	<string>https://starter-ef26b.firebaseio.com</string>
+</dict>
+</plist>

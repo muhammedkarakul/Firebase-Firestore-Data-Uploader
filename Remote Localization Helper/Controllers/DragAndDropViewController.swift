@@ -81,6 +81,7 @@ final class DragAndDropViewController: NSViewController {
                 _ = dialog(message: "Warning", information: "Localization data is empty!", firstButtonTitle: "OK")
             } else {
                 for (index, item) in data.enumerated() {
+                    // FIXME: - Maybe you need change here for your data type
                     guard let localizedString = item.value as? [String : Any] else { return }
                     AppDelegate.db.collection(collectionPath).document(item.key).setData(localizedString) { error in
                         if let error = error {

@@ -13,6 +13,7 @@
 		577F79DC2416682000860C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577F79DA2416682000860C43 /* Main.storyboard */; };
 		577F79E9241679AF00860C43 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F79E8241679AF00860C43 /* DropView.swift */; };
 		577F79EE2416A4B000860C43 /* UploadSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F79EC2416A4B000860C43 /* UploadSheetViewController.swift */; };
+		57C8EBBA241A18FE00BC5AC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57C8EBB9241A18FE00BC5AC8 /* GoogleService-Info.plist */; };
 		60EB084A507207B78CB2FDE6 /* Pods_Remote_Localization_Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE18BC40143476AF24A2396F /* Pods_Remote_Localization_Helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		577F79DE2416682000860C43 /* Remote_Localization_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Remote_Localization_Helper.entitlements; sourceTree = "<group>"; };
 		577F79E8241679AF00860C43 /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		577F79EC2416A4B000860C43 /* UploadSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSheetViewController.swift; sourceTree = "<group>"; };
+		57C8EBB9241A18FE00BC5AC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFB95392FDAD5B5298732C66 /* Pods-Remote Localization Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Localization Helper.debug.xcconfig"; path = "Target Support Files/Pods-Remote Localization Helper/Pods-Remote Localization Helper.debug.xcconfig"; sourceTree = "<group>"; };
 		E631B876FDE0D65CD6D6E53D /* Pods-Remote Localization Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Localization Helper.release.xcconfig"; path = "Target Support Files/Pods-Remote Localization Helper/Pods-Remote Localization Helper.release.xcconfig"; sourceTree = "<group>"; };
 		FE18BC40143476AF24A2396F /* Pods_Remote_Localization_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Remote_Localization_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +56,7 @@
 		571297F52417890F00A4A977 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				57C8EBB9241A18FE00BC5AC8 /* GoogleService-Info.plist */,
 				577F79D42416681F00860C43 /* AppDelegate.swift */,
 				577F79D82416682000860C43 /* Assets.xcassets */,
 				577F79DE2416682000860C43 /* Remote_Localization_Helper.entitlements */,
@@ -187,6 +190,7 @@
 			files = (
 				577F79D92416682000860C43 /* Assets.xcassets in Resources */,
 				577F79DC2416682000860C43 /* Main.storyboard in Resources */,
+				57C8EBBA241A18FE00BC5AC8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +391,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourCompany.AppName;
+				PRODUCT_BUNDLE_IDENTIFIER = com.loodos.StarterBeta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -407,7 +411,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourCompany.AppName;
+				PRODUCT_BUNDLE_IDENTIFIER = com.loodos.StarterBeta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
