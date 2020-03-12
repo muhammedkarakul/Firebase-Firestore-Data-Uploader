@@ -23,3 +23,17 @@ I get the localization part of this template xcode project. I want to design and
 We have a plist file and it stores default localization value. App save this data to UserDefaults. If your app connected to internet it gets localization value from your web api. I cant write web service for now. Threfore i use Firebase. But you can make some little change and use this tool with your web services. Whetever if your app reach to internet gets localization value from web and write this data on default values. Everytime localization update not too right. This is come with a lot of disadvantage. If your app have a lot of user this process may be crash your servers. Users wait every time for this process when app launch and also maybe use cellular data for this. I think this is enough for bad approach. What i need? Maybe version control like git. When i change some values on Firebase, app must understand this and update localization data. I need socket programming? Getting more complicated. But no! I use Firebase remote config tool for version control. I store a double value named like 'localizationVersion'. When i want update localization data, increase localizationVersion and app control this version, when version number increased app update localization data and localizationVersion.
 
 <img src="flow.png"/>
+
+## Usage
+
+### Step 1. Drag And Drop File
+<img src="step1.png"/>
+
+### Step 2. Enter Collection Path
+<img src="step2.png"/>
+
+### Step 3. Press Upload Button
+<img src="step3.png"/>
+
+### Step 4. Success
+<img src="step4.png"/>
